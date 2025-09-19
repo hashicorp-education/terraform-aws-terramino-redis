@@ -1,7 +1,7 @@
 #!/bin/bash
 
-curl -OL https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
-sudo tar -C /usr/local -xvf go1.23.1.linux-amd64.tar.gz
+curl -OL https://go.dev/dl/go1.25.1.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvf go1.25.1.linux-amd64.tar.gz
 
 export PATH=$PATH:/usr/local/go/bin
 export HOME="/tmp/home"
