@@ -13,7 +13,7 @@ export GOCACHE="/tmp/go/cache"
 # Setup Redis #
 ###############
 
-apt-get install lsb-release curl gpg
+apt-get -y install lsb-release curl gpg
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
@@ -34,8 +34,5 @@ echo "requirepass ${redis_password}" >> /etc/redis/redis.conf
 cd ~
 git clone https://github.com/hashicorp-education/terraform-aws-terramino-redis.git
 cd terraform-aws-terramino-redis/terramino-go
-
-# Temporarily checkout a previous version of terramino-go
-git checkout 58d39908e07424cba3b0c2f2d9588d9cebfa476b
 
 APP_NAME=${app_name} TERRAMINO_PORT=${port} go run main.go
