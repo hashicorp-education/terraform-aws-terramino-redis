@@ -1,6 +1,6 @@
 # Terraform + Redis Terraform no-code module
 
-This no-code modules deploys [terramino-go](https://github.com/hashicorp-education/terramino-go) and Redis on a single AWS EC2 instance.
+This no-code module deploys [terramino-go](https://github.com/hashicorp-education/terramino-go) and Redis on a single AWS EC2 instance.
 
 ## Requirements
 
